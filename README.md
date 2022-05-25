@@ -1,7 +1,11 @@
 # API_Server
 This is a fake API server which will fetch the json data and present it.
+
+## How to run
+Simply clone the repo and run the main.py file using command: `python main.py`
+
 ## Getting all the Posts
-Simply run the main.py file: Command: **python main.py**, follow the link provided and all the posts will be listed.
+After running the main.py file: Command: **python main.py**, follow the link provided and all the posts will be listed.
 
 <hr>
 
