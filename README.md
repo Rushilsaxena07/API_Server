@@ -1,6 +1,5 @@
 # API_Server
 This is a fake API server which will fetch the json data and present it.
-<hr>
 ## Getting all the Posts
 Simply run the main.py file: Command: **python main.py**, follow the link provided and all the posts will be listed.
 
