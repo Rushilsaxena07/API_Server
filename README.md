@@ -2,16 +2,16 @@
 This is a fake API server which will fetch the json data and present it.
 
 ## How to run
-Simply clone the repo and run the main.py file using command: `python main.py`
+Install all the dependencies, just clone the project and run the following command: `pip install -r requirements.txt`
+Now that you have the required modules run the api_app.py file using command: `api_app main.py`
+
+<hr>
 
 ## Getting all the Posts
-After running the main.py file: Command: **python main.py**, follow the link provided and all the posts will be listed.
+After running the api_app.py file: Command: **python api_app.py**, follow the link provided and add `/posts` to view all the posts.
 
 <hr>
 
 ## Getting a particular post from postId
-Follow the above mention steps, and add `/resource/<any postId number>`, and you will be able to see only that specific post.
-<hr>
+Follow the above mention steps, and add `/posts/<any userid number>`, and you will be able to see only that username and comment.
 
-## Getting comments from a post
-Add `/resource/<postIdNumber>/comments` or `/resource/comments?postId=<postId-Number>`.
