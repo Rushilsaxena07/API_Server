@@ -3,7 +3,7 @@ This is a fake API server which will fetch the json data and present it.
 
 ## How to run
 Install all the dependencies, just clone the project and run the following command: `pip install -r requirements.txt`
-Now that you have the required modules run the api_app.py file using command: `python api_app main.py`
+Now that you have the required modules run the api_app.py file using command: `python api_app.py`
 
 <hr>
 
