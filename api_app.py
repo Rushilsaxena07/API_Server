@@ -1,4 +1,4 @@
-from flask import Flask, jsonify #jsonify formats the output properly. ie, it returns a valid json
+from flask import Flask, request, jsonify #jsonify formats the output properly. ie, it returns a valid json
 from flask_sqlalchemy import SQLAlchemy #Sqlalchemy in an orm(object relational mapper) through this we can create and make changes in db using python.
 
 app = Flask(__name__)
@@ -30,8 +30,24 @@ def view_posts():
 
 @app.route("/posts/<id>")
 def get_post(id):
-    post = Posts.query.get_or_404(id)
+    post = Posts.query.get(id) #Query has a get function that supports querying by the primary key of the table, which is id, here I could also use get_or_404
     return jsonify({"name" : post.username, "comments" : post.comments})
+
+@app.route("/posts", methods=['POST'])
+def add_post():
+    post = Posts(username=request.json['username'], comments=request.json['comments']) # request.json is used to get the json data from the comming request.
+    db.session.add(post)
+    db.session.commit()
+    return {'id' : post.id}
+
+@app.route("/posts/<id>", methods=['DELETE'])
+def delete_post(id):
+    post = Posts.query.get(id) #Query has a get function that supports querying by the primary key of the table, which is id.
+    if post is None:
+        return {"error":"Please give a valid post id"}
+    db.session.delete(post)
+    db.session.commit()
+    return {"message":"deleted post with the given id"}
 
 if __name__ == "__main__":
     app.run(debug=True)
