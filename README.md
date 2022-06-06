@@ -27,3 +27,13 @@ After installing POSTMAN, just select the POST method, give the api end point li
 }
 ```
 After sending the request, the server would return the id of the username.
+
+<hr>
+
+## To delete a record
+To delte a record, simply give the 'id' with the url:`/posts/<any userid number>`, select DELETE method and send the request, the server will delte the entry and give a conformation message:
+```
+{
+    "message": "deleted post with the given id"
+}
+```
