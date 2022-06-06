@@ -20,12 +20,10 @@ Follow the above mention steps, and add `/posts/<any userid number>`, and you wi
 ## To create a record
 For the creation of a new record, you would need POSTMAN tool or you can add "Thunder Client" extension in VS Code to send GET,POST,DELETE etc requests to an api endpoint.
 After installing POSTMAN, just select the POST method, give the api end point link provided by running the `api_app.py` file, select body to raw and json enter the json data which should look like:
-```{
+```
+{
     "username" : "test"
     "comments" : "this is for testing"
-}```
+}
+```
 After sending the request, the server would return the id of the username.
-
-<hr>
-
-## To create a record
